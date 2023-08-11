@@ -1,15 +1,26 @@
+* {
+    --bg: darkslategrey;
+    --header: navajowhite;
+}
+
 body {
-    background: darkslategrey;
+    background: var(--bg, darkslategrey);
+    margin: 0;
 }
 
 h1 {
     text-align: center;
-    color: whitesmoke;
+    color: var(--bg, darkslategrey);
     font-size: xxx-large;
+    margin: 2px;
+}
+
+.header {
+    background: var(--header, navajowhite);
+    padding: 10px;;
 }
 
 .socials {
-    background: navajowhite;
     text-align: center;
     display: flex;
     flex-direction: row;
@@ -17,12 +28,30 @@ h1 {
     align-items: center;
 }
 
-.linkedin-image {
+.logo {
     width: 32px;
     height: auto;
 }
 
-.github-image {
-    width: 32px;
-    height: auto;
+.project-link {
+    margin-left: 20px;
+}
+
+.projects {
+    color: var(--header, navajowhite);
+    border-width: 2px;
+    border-style: inset;
+    border-color: var(--header, navajowhite);
+}
+
+.project-title {
+    margin-left: 10px;
+    margin-bottom: 0;
+}
+
+.project-text {
+    margin-top: 0;
+    margin-left: 20px;
+    color: white;
+    text-indent: 30px;
 }
