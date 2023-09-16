@@ -51,7 +51,23 @@ h1 {
 
 .project-text {
     margin-top: 0;
-    margin-left: 20px;
+    margin-left: 10px;
     color: white;
     text-indent: 30px;
+}
+
+.project-contributions {
+    font-size: large;
+}
+
+.contribution-type {
+    margin-left: 20px;
+}
+
+li {
+    font-size: small;
+}
+
+.project-contributions > li {
+    margin-left: 20px;
 }
