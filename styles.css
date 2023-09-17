@@ -60,12 +60,21 @@ h1 {
     font-size: large;
 }
 
-.contribution-type {
-    margin-left: 20px;
+.project-role {
+    margin-left: 40px;
+    margin-bottom: 0;
 }
 
 li {
     font-size: small;
+}
+
+li:last-child::after {
+    content: "Source code in the github link below";
+}
+
+li:last-child::marker {
+    content: "🔽";
 }
 
 .project-contributions > li {
