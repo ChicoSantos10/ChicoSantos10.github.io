@@ -1,3 +1,9 @@
+.title {
+    text-align: center;
+    background: aliceblue;
+    color: white;
+}
+
 * {
     --bg: darkslategrey;
     --header: navajowhite;
