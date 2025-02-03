@@ -25,12 +25,14 @@ export default class Starfield {
         const mat = new THREE.PointsMaterial({
             vertexColors: true,
             map: starTexture,
+            transparent: true,
+            opacity: 0.85
         });
         this.points = new THREE.Points(geo, mat);
     }
 
     randomSpherePoint() {
-        const radius = Math.random() * 25 + 25;
+        const radius = Math.random() * 100 + 10;
         const u = Math.random();
         const v = Math.random();
         const theta = 2 * Math.PI * u;
@@ -47,6 +49,6 @@ export default class Starfield {
     }
 
     update() {
-        this.points.material.size = 0.3 + Math.random() * 0.03
+        this.points.material.size = 0.3 + Math.random() * 0.08
     }
 }

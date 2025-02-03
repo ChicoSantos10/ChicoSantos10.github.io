@@ -7,7 +7,5 @@ export function createEarth(radius = 1) {
     const detail = 60
     const earthGeo = new THREE.IcosahedronGeometry(radius, detail)
     const material = new THREE.MeshPhysicalMaterial({color: 0xffffff, map: earthTexture})
-    const earth = new THREE.Mesh(earthGeo, material)
-
-    return earth
+    return new THREE.Mesh(earthGeo, material)
 }
