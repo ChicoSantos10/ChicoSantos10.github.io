@@ -2,3 +2,7 @@ level select:
 - biography
 - Personal projects
 - Career
+
+atmosphere on planet
+shooting stars randomly appearing
+other planets from the solar system

@@ -30,11 +30,9 @@ earth.add(stars.points)
 
 sunLight.target = earth
 
-// Create:
 const title = new Text()
 mainMenuScene.scene.add(title)
 
-// Set properties to configure:
 title.text = 'Francisco Santos'
 title.font = 'fonts/BonaNovaSC-Regular.ttf'
 title.fontSize = 1
@@ -58,17 +56,16 @@ title.material = new THREE.ShaderMaterial({
     fragmentShader: shader.fragmentShader
 });
 
-// Update the rendering:
 title.sync()
 
-const menuOptionsName = ['About', 'Career', 'Education', 'Socials', ]
-const menuOptions = []
-for (let i = 0; i < menuOptionsName.length; i++) {
-    const option = new MainMenuOption(menuOptionsName[i], i, mainMenuScene)
-    menuOptions.push(option)
-    mainMenuScene.add(option)
-    option.sync()
-}
+// const menuOptionsName = ['About', 'Career', 'Education', 'Socials', ]
+// const menuOptions = []
+// for (let i = 0; i < menuOptionsName.length; i++) {
+//     const option = new MainMenuOption(menuOptionsName[i], i, mainMenuScene)
+//     menuOptions.push(option)
+//     mainMenuScene.add(option)
+//     option.sync()
+// }
 
 mainMenuScene.camera.position.z = 5;
 

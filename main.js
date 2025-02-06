@@ -26,3 +26,15 @@ window.addEventListener('resize', function () {
 }, false);
 
 renderer.domElement.addEventListener('mousemove', OnMouseMove, false);
+
+const cover = document.querySelector(".cover")
+const aboutMeButton = document.querySelector("#about-me-button")
+const aboutMeSection = document.querySelector(".about-me")
+
+aboutMeButton.addEventListener('click', toggleAboutMe)
+cover.addEventListener('click', toggleAboutMe)
+
+function toggleAboutMe() {
+    cover.classList.toggle("hidden")
+    aboutMeSection.classList.toggle("active");
+}

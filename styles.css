@@ -1,3 +1,130 @@
+.about-me {
+    display: block;
+    position: absolute;
+    background: hsla(174 100% 82.7% / 0.91);
+    width: 50%;
+    height: 30%;
+    min-height: fit-content;
+    left: 0;
+    right: 0;
+    top: 30%;
+    margin-inline: auto;
+    border-radius: 15px;
+    border: 2px ridge white;
+    padding: 15px;
+    transform: scale(0, 1);
+    transition: transform 200ms;
+}
+
+.about-me.active {
+    transform: scale(1, 1);
+}
+
+.cover {
+    background-color: rgb(0 0 0 / 35%);
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    transition: background-color 200ms;
+}
+
+.cover.hidden {
+    background-color: rgb(0 0 0 / 0%);
+}
+
+#menu-buttons {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 40%;
+    height: 25%;
+    justify-content: space-between;
+    left: 10%;
+}
+
+button {
+    display: block;
+    position: relative;
+    padding: 0.2em 0;
+}
+
+#menu-buttons button {
+    border: none;
+    background: none;
+    color: white;
+    width: fit-content;
+    font-size: xxx-large;
+    font-family: title-font, fantasy;
+    text-shadow: 0 0 3px #080e07, 0 0 6px #304a43, 0 0 9px #537f78, 0 0 12px #7dbfb7, 0 0 20px #a7fff6;
+    transition: padding-left 200ms;
+}
+
+#menu-buttons button:hover {
+    padding-left: 20px;
+}
+
+#menu-buttons button::after {
+    content: '';
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.1em;
+    display: block;
+    background: #8D909B;
+    transform: translate3d(-20%, 0, 0);
+    opacity: 0;
+    transition: opacity 200ms ease-in, transform 200ms;
+}
+
+#menu-buttons button:hover::after,
+#menu-buttons button:focus::after {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+}
+
+#portrait {
+    float: left;
+    margin: 0 30px 30px 30px;
+    border: 2px ridge white;
+}
+
+.close-cross {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 10%;
+}
+
+p {
+    font-family: sans-serif;
+    font-size: 16px;
+    line-height: 28px;
+}
+
+h1 {
+    text-align: center;
+    font-size: xxx-large;
+    margin: 2px;
+}
+
+h1, p {
+    color: #080E07;
+}
+
+.hidden {
+    visibility: hidden;
+    transition: visibility 100ms;
+}
+
+@font-face {
+    font-family: title-font;
+    src: url("./fonts/BonaNovaSC-Regular.ttf");
+}
+
+/*TODO: Old Stuff below*/
+
 .title {
     text-align: center;
     background: aliceblue;
@@ -12,13 +139,6 @@
 body {
     background: var(--bg, darkslategrey);
     margin: 0;
-}
-
-h1 {
-    text-align: center;
-    color: var(--bg, darkslategrey);
-    font-size: xxx-large;
-    margin: 2px;
 }
 
 .header {
