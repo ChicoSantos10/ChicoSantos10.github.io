@@ -1,9 +1,29 @@
 body {
-    background: var(--bg, darkslategrey);
+    background: var(--night);
     margin: 0;
+    padding: 0;
     width: 100%;
     height: 100%;
     overflow: hidden;
+    font-family: title-font, fantasy;
+}
+
+h1 {
+    --blur-radius: 30px;
+    --outline-radius: 2px;
+
+    font-size: 15vh;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    margin: 5vh 0;
+    max-height: 25%;
+    color: var(--title);
+    /*-webkit-text-stroke: 1px white;*/
+    text-shadow:
+            white var(--outline-radius) 0 2px, white 0 var(--outline-radius) 2px, white calc(-1*var(--outline-radius)) 0 2px, white 0 calc(-1*var(--outline-radius)) 2px,
+            var(--title) -2px -2px var(--blur-radius), var(--title) 2px 2px var(--blur-radius), var(--title) 0 0 var(--blur-radius);
 }
 
 .about-me {
@@ -110,14 +130,14 @@ p {
     line-height: 28px;
 }
 
-h1 {
+h2 {
     text-align: center;
     font-size: xxx-large;
     margin: 2px;
 }
 
-h1, p {
-    color: #080E07;
+h2, p {
+    color: var(--night);
 }
 
 .hidden {

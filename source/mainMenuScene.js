@@ -30,33 +30,33 @@ earth.add(stars.points)
 
 sunLight.target = earth
 
-const title = new Text()
-mainMenuScene.scene.add(title)
-
-title.text = 'Francisco Santos'
-title.font = 'fonts/BonaNovaSC-Regular.ttf'
-title.fontSize = 1
-
-title.position.z = 1
-title.position.y = 2
-title.anchorX = "center"
-title.anchorY = "middle"
-
-title.color = 0xFF4DCC
-title.outlineColor = 0x631A86
-title.outlineWidth = 0.01
-title.outlineBlur = 0.1
-
-title.strokeWidth = 0.01
-title.strokeColor = 0xF8F991
-
-const shader = testshader;
-title.material = new THREE.ShaderMaterial({
-    vertexShader: shader.vertexShader,
-    fragmentShader: shader.fragmentShader
-});
-
-title.sync()
+// const title = new Text()
+// mainMenuScene.scene.add(title)
+//
+// title.text = 'Francisco Santos'
+// title.font = 'fonts/BonaNovaSC-Regular.ttf'
+// title.fontSize = 1
+//
+// title.position.z = 1
+// title.position.y = 2
+// title.anchorX = "center"
+// title.anchorY = "middle"
+//
+// title.color = 0xFF4DCC
+// title.outlineColor = 0x631A86
+// title.outlineWidth = 0.01
+// title.outlineBlur = 0.1
+//
+// title.strokeWidth = 0.01
+// title.strokeColor = 0xF8F991
+//
+// const shader = testshader;
+// title.material = new THREE.ShaderMaterial({
+//     vertexShader: shader.vertexShader,
+//     fragmentShader: shader.fragmentShader
+// });
+//
+// title.sync()
 
 // const menuOptionsName = ['About', 'Career', 'Education', 'Socials', ]
 // const menuOptions = []

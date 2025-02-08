@@ -41,6 +41,11 @@ export const OnMouseMove = async (event) => {
 export function ResizeScenes() {
     for (const scene of scenes) {
         scene.camera.aspect = window.innerWidth / window.innerHeight;
+        if (scene.camera.aspect < 1) {
+            scene.camera.position.z = 5 / scene.camera.aspect;
+        } else {
+            scene.camera.position.z = 5;
+        }
         scene.camera.updateProjectionMatrix();
     }
 }
