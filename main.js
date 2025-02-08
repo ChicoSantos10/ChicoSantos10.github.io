@@ -38,3 +38,60 @@ function toggleAboutMe() {
     cover.classList.toggle("hidden")
     aboutMeSection.classList.toggle("active");
 }
+
+const grids = document.querySelectorAll('.grid.snaps-inline')
+grids.forEach((grid) => {
+    const buttonRight = grid.querySelector('.scroll-button.right')
+    const buttonLeft = grid.querySelector('.scroll-button.left')
+
+    grid.querySelectorAll('.scroll-button').forEach( function ( e ) {
+    e.onclick = function () {
+        let direction
+        if (e.classList.contains('right'))
+            direction = 'right'
+        else if (e.classList.contains('left'))
+            direction = 'left'
+
+        if (direction !== undefined)
+            scroll(grid, direction)
+    }
+    })
+    grid.onscroll = function (e) {
+        grid.scrolling = true
+        clearTimeout(grid.scrollTimer)
+        grid.scrollTimer = setTimeout(function () {
+            grid.scrolling = false
+            buttonRight.classList.remove('moving')
+            buttonLeft.classList.remove('moving')
+        }, 100)
+
+        if (grid.scrollLeft + grid.clientWidth >= grid.scrollWidth) {
+            buttonRight.classList.add('hidden')
+        } else if (grid.scrollLeft <= 0) {
+            buttonLeft.classList.add('hidden')
+        } else {
+            buttonRight.classList.remove('hidden')
+            buttonLeft.classList.remove('hidden')
+        }
+
+        buttonRight.classList.add('moving')
+        buttonLeft.classList.add('moving')
+    }
+    function scroll(container, direction) {
+        if (container.scrolling)
+            return
+        container.scrollLeft = container.scrollLeft + (direction === 'right' ? container.clientWidth : -container.clientWidth);
+    }
+})
+
+const timelineButton = document.querySelector("#timeline-button")
+document.querySelectorAll('.fullscreen-cover').forEach( function ( e ) {
+    if(e.id === 'timeline-menu') {
+        timelineButton.onclick = function () {
+            e.classList.remove('hidden')
+        }
+        e.querySelector('.return').onclick = function () {
+            e.classList.add('hidden')
+        }
+    }
+})

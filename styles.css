@@ -1,3 +1,11 @@
+body {
+    background: var(--bg, darkslategrey);
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
 .about-me {
     display: block;
     position: absolute;
@@ -78,8 +86,7 @@ button {
     transition: opacity 200ms ease-in, transform 200ms;
 }
 
-#menu-buttons button:hover::after,
-#menu-buttons button:focus::after {
+#menu-buttons button:hover::after {
     transform: translate3d(0, 0, 0);
     opacity: 1;
 }
@@ -134,11 +141,6 @@ h1, p {
 * {
     --bg: darkslategrey;
     --header: navajowhite;
-}
-
-body {
-    background: var(--bg, darkslategrey);
-    margin: 0;
 }
 
 .header {
@@ -199,17 +201,17 @@ body {
     margin-bottom: 0;
 }
 
-li {
-    font-size: small;
-}
+/*li {*/
+/*    font-size: small;*/
+/*}*/
 
-li:last-child::after {
-    content: "Source code in the github link below";
-}
+/*li:last-child::after {*/
+/*    content: "Source code in the github link below";*/
+/*}*/
 
-li:last-child::marker {
-    content: "🔽";
-}
+/*li:last-child::marker {*/
+/*    content: "🔽";*/
+/*}*/
 
 .project-contributions > li {
     margin-left: 20px;

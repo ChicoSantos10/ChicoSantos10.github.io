@@ -4,108 +4,203 @@
     <meta charset="UTF-8">
     <title>Francisco Santos Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles/grid.css">
+    <link rel="stylesheet" href="styles/vars.css">
 </head>
 <body>
-        <script type="module" src="/main.js"></script>
-        <div id="menu-buttons" class="button-container">
-            <button id="about-me-button">About Me</button>
-            <button id="career-button">Career</button>
-            <button id="projects-button">Projects</button>
-        </div>
-        <div class="cover hidden">
-            <div class="about-me">
-                <h1>About Me</h1>
-                <img id="portrait" src="textures/personal_picture.jpg" alt="Portrait photo of me" width="250">
-                <p>My name is Francisco, and have been exploring the world of game development since 2018. So far most
-                    of my
-                    experience is in Unity, but I'm currently learning Unreal Engine 5 as well. As for programming
-                    languages I'm very experienced with C# and C++
-                    since those are my daily tools but also have experience with plenty of other languages and am quite
-                    confident in learning and adapting to any language.
-                    Most of my time spent in Unity has been exploring the engine and learning its ins and outs, and I'm
-                    very confident in working in any part of the engine.
-                </p>
-                <p>Love working on anything challenging and always trying to find solutions that not only work but also
-                    are performant and efficient to any problem.</p>
-            </div>
-        </div>
-        <div class="header">
-        <h1>Francisco Santos</h1>
-        <div class="socials">
-            <a href="https://linkedin.com/in/francisco-santos-6a2847138" target="_blank">
-                <img class="logo linkedin" src="LI-In-Bug.png" alt="LinkedIn profile">
-            </a>
-            <a href="https://github.com/ChicoSantos10" target="_blank">
-                <img class="logo git" src="github-mark.png" alt="GitHub profile">
-            </a>
-        </div>
+    <script type="module" src="/main.js"></script>
+    <div id="menu-buttons" class="button-container">
+        <button id="about-me-button">About Me</button>
+        <button id="timeline-button">Timeline</button>
+        <button id="projects-button">Projects</button>
     </div>
-    <div class="projects">
-        <div>
-            <h2 class="project-title">Fun Text</h2>
-            <p class="project-text">A text animation tool made for Unity</p>
-            <h3 class="project-role">Role:</h3>
-            <p class="project-text">Creator</p>
-        </div>
-        <!--<div>
-            <h2 class="project-title">SSS Engine</h2>
-            <p class="project-text">
-                A cross-platform game engine written in C++ from scratch without the use of external libraries.
+    <div class="cover hidden">
+        <div class="about-me">
+            <h1>About Me</h1>
+            <img id="portrait" src="icons/personal_picture.jpg" alt="Portrait photo of me" width="250">
+            <p>My name is Francisco, and have been exploring the world of game development since 2018. So far most
+                of my
+                experience is in Unity, but I'm currently learning Unreal Engine 5 as well. As for programming
+                languages I'm very experienced with C# and C++
+                since those are my daily tools but also have experience with plenty of other languages and am quite
+                confident in learning and adapting to any language.
+                Most of my time spent in Unity has been exploring the engine and learning its ins and outs, and I'm
+                very confident in working in any part of the engine.
             </p>
-            <a href="https://github.com/ChicoSantos10/SSSEngine" target="_blank">
-                <img class="logo project-link" src="github-mark.png" alt="GitHub profile">
-            </a>
-        </div>-->
-        <div>
-            <h2 class="project-title">Project: Elevator</h2>
-            <p class="project-text">A 3D puzzle game made in Unity</p>
-            <h3 class="project-role">Role:</h3>
-            <p class="project-text">Lead developer</p>
-            <ul class="project-contributions"> Some contributions:
-                <li>Custom cursor with animations</li>
-                <li>Dialog system</li>
-                <li>Interaction system</li>
-                <li>Object painting</li>
-                <li>Shaders</li>
-                <li>State Machine</li>
-                <li>Editor tools</li>
-                <li>Event system</li>
-                <li></li>
-            </ul>
-            <div class="links">
-                <a href="https://github.com/ChicoSantos10/Project-Elevator.git" target="_blank">
-                    <img class="logo project-link" src="github-mark.png" alt="Source code">
-                </a>
-                <a href="https://sssgames.itch.io/project-elevator" target="_blank">
-                    <img class="logo project-link" src="itch.io_logo.png" alt="Itch.io">
-                </a>
-            </div>
-        </div>
-        <div>
-            <h2 class="project-title">Final Sentence</h2>
-            <p class="project-text">A 2d survival game in Unity</p>
-            <h3 class="project-role">Role:</h3>
-            <p class="project-text">Lead developer</p>
-            <ul class="project-contributions"> Some contributions:
-                <li>Procedural generation of the maps with collisions and random asset placement</li>
-                <li>Behaviour tree</li>
-                <li>Pathfinding using A*</li>
-                <li>Inventory and crafting system</li>
-                <li>Custom event system using scriptable objects</li>
-                <li>Combat and stats system</li>
-                <li>Monster spawning</li>
-                <li>Editor tools</li>
-                <li>Day and night cycle</li>
-                <li>Save and load system</li>
-                <li></li>
-            </ul>
-            <div class="links">
-                <a href="https://github.com/ChicoSantos10/Final-Sentence.git" target="_blank">
-                    <img class="logo project-link" src="github-mark.png" alt="Source code">
-                </a>
-            </div>
+            <p>Love working on anything challenging and always trying to find solutions that not only work but also
+                are performant and efficient to any problem.</p>
         </div>
     </div>
+    <div id="timeline-menu" class="fullscreen-cover hidden">
+        <button class="return"></button>
+        <h2 class="timeline">Timeline</h2>
+        <div class="grid snaps-inline career">
+            <div class="scroll-button left hidden"></div>
+            <div class="grid-element">
+                <!--TODO: Choose the right logo when landscape vs portrait (cube vs logo)-->
+                <img id="Unity-Logo" src="icons/Unity_Logo.png" alt="Unity logo">
+                <div class="details">
+                    <h3>Started Learning Game Development and Programming</h3>
+                    <p class="time">2016-present</p>
+                    <p>
+                        Started learning Unity following their tutorials. In this time I also took the time to start learning
+                        C# and started taking courses in both Unity and C#. Also starting learning more programming general
+                        concepts like memory, algorithms... and started also learning C.
+                    </p>
+                    <p>
+                        With this new knowledge started making my own prototype games to really consolidate everything and
+                        also learn new things.
+                    </p>
+                </div>
+            </div>
+            <div class="grid-element">
+                <img src="icons/IPCA-Logo.png" alt="IPCA logo">
+                <div class="details">
+                    <h3>Education</h3>
+                    <p class="time">2019-2022</p>
+                    <p>Graduated from Polytechnic Institute of Cávado and Ave with a final grade of A.</p>
+                    <p>Among the things learned were:</p>
+                    <ul>
+                        <li>Creating games in Unity</li>
+                        <li>Creating games with Monogame</li>
+                        <li>Using OpenGL with glfw</li>
+                        <li>C, C#, C++, Kotlin and Swift</li>
+                        <li>How the Hardware works</li>
+                        <li>Shaders and rendering</li>
+                        <li>Game AI algorithms</li>
+                        <li>Game Math</li>
+                        <li>Game Design</li>
+                        <li>3D Modeling and rigging</li>
+                        <li>2D Art with photoshop, illustrator and hand drawing</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid-element">
+                <img src="icons/ludus_logo.png" alt="Ludus Cristaltec logo">
+                <div class="details">
+                    <h3>LudusCristaltec</h3>
+                    <p class="time">2022-2023</p>
+                    <p>Helped develop games for video lottery terminals.</p>
+                    <p>Technologies used:</p>
+                    <ul>
+                        <li>Proprietary language</li>
+                        <li>Photoshop</li>
+                        <li>VS Code</li>
+                    </ul>
+                    <p>The games that I worked were:</p>
+                    <ul>
+                        <li>Flash Gordon</li>
+                        <li>Temple Queen</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid-element">
+                <img src="icons/CTW_Logo.svg" alt="Critical Techworks logo">
+                <div class="details">
+                    <h3>Critical Techworks</h3>
+                    <p class="time">2023-2024</p>
+                    <p>Helped develop scripts meant to be run in BMW group cars.</p>
+                    <p>Helped start a team and create best practices.</p>
+                    <p>Helped integrate new members.</p>
+                    <p>Technologies and Methodologies used:</p>
+                    <ul>
+                        <li>Typescript and C++ compiled to WASM</li>
+                        <li>Agile and Scrum</li>
+                        <li>VS Code and Neovim</li>
+                    </ul>
+                </div>
+            </div>
+            <button class="scroll-button right"></button>
+        </div>
+    </div>
+    <div id="projects-menu" class="fullscreen-cover hidden">
+        <h2 class="timeline">Level Select</h2>
+        <div class="grid projects">
+            <div class="grid-element">
+
+            </div>
+            <div class="grid-element"></div>
+            <div class="grid-element"></div>
+            <div class="grid-element"></div>
+        </div>
+    </div>
+<!--    <div class="header">-->
+<!--        <h1>Francisco Santos</h1>-->
+<!--        <div class="socials">-->
+<!--            <a href="https://linkedin.com/in/francisco-santos-6a2847138" target="_blank">-->
+<!--                <img class="logo linkedin" src="LI-In-Bug.png" alt="LinkedIn profile">-->
+<!--            </a>-->
+<!--            <a href="https://github.com/ChicoSantos10" target="_blank">-->
+<!--                <img class="logo git" src="github-mark.png" alt="GitHub profile">-->
+<!--            </a>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <div class="projects">-->
+<!--        <div>-->
+<!--            <h2 class="project-title">Fun Text</h2>-->
+<!--            <p class="project-text">A text animation tool made for Unity</p>-->
+<!--            <h3 class="project-role">Role:</h3>-->
+<!--            <p class="project-text">Creator</p>-->
+<!--        </div>-->
+<!--        &lt;!&ndash;<div>-->
+<!--            <h2 class="project-title">SSS Engine</h2>-->
+<!--            <p class="project-text">-->
+<!--                A cross-platform game engine written in C++ from scratch without the use of external libraries.-->
+<!--            </p>-->
+<!--            <a href="https://github.com/ChicoSantos10/SSSEngine" target="_blank">-->
+<!--                <img class="logo project-link" src="github-mark.png" alt="GitHub profile">-->
+<!--            </a>-->
+<!--        </div>&ndash;&gt;-->
+<!--        <div>-->
+<!--            <h2 class="project-title">Project: Elevator</h2>-->
+<!--            <p class="project-text">A 3D puzzle game made in Unity</p>-->
+<!--            <h3 class="project-role">Role:</h3>-->
+<!--            <p class="project-text">Lead developer</p>-->
+<!--            <ul class="project-contributions"> Some contributions:-->
+<!--                <li>Custom cursor with animations</li>-->
+<!--                <li>Dialog system</li>-->
+<!--                <li>Interaction system</li>-->
+<!--                <li>Object painting</li>-->
+<!--                <li>Shaders</li>-->
+<!--                <li>State Machine</li>-->
+<!--                <li>Editor tools</li>-->
+<!--                <li>Event system</li>-->
+<!--                <li></li>-->
+<!--            </ul>-->
+<!--            <div class="links">-->
+<!--                <a href="https://github.com/ChicoSantos10/Project-Elevator.git" target="_blank">-->
+<!--                    <img class="logo project-link" src="github-mark.png" alt="Source code">-->
+<!--                </a>-->
+<!--                <a href="https://sssgames.itch.io/project-elevator" target="_blank">-->
+<!--                    <img class="logo project-link" src="itch.io_logo.png" alt="Itch.io">-->
+<!--                </a>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div>-->
+<!--            <h2 class="project-title">Final Sentence</h2>-->
+<!--            <p class="project-text">A 2d survival game in Unity</p>-->
+<!--            <h3 class="project-role">Role:</h3>-->
+<!--            <p class="project-text">Lead developer</p>-->
+<!--            <ul class="project-contributions"> Some contributions:-->
+<!--                <li>Procedural generation of the maps with collisions and random asset placement</li>-->
+<!--                <li>Behaviour tree</li>-->
+<!--                <li>Pathfinding using A*</li>-->
+<!--                <li>Inventory and crafting system</li>-->
+<!--                <li>Custom event system using scriptable objects</li>-->
+<!--                <li>Combat and stats system</li>-->
+<!--                <li>Monster spawning</li>-->
+<!--                <li>Editor tools</li>-->
+<!--                <li>Day and night cycle</li>-->
+<!--                <li>Save and load system</li>-->
+<!--                <li></li>-->
+<!--            </ul>-->
+<!--            <div class="links">-->
+<!--                <a href="https://github.com/ChicoSantos10/Final-Sentence.git" target="_blank">-->
+<!--                    <img class="logo project-link" src="github-mark.png" alt="Source code">-->
+<!--                </a>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
 </body>
 </html>
 
