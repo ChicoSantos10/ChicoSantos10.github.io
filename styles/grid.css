@@ -125,12 +125,12 @@
 }
 
 .scroll-button.left {
-    mask-image: url("../icons/arrow-left-o.svg");
+    mask-image: url("../images/arrow-left-o.svg");
     left: var(--offset);
 }
 
 .scroll-button.right {
-    mask-image: url("../icons/arrow-right-o.svg");
+    mask-image: url("../images/arrow-right-o.svg");
     right: var(--offset);
 }
 
@@ -138,7 +138,7 @@
     position: absolute;
     top: 1em;
     right: 0;
-    mask-image: url("../icons/cross.svg");
+    mask-image: url("../images/cross.svg");
     width: 5rem;
     height: 5rem;
 }

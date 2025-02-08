@@ -4,5 +4,6 @@ level select:
 - Career
 
 atmosphere on planet
-shooting stars randomly appearing
+shooting stars and rockets randomly appearing
 other planets from the solar system
+favicon
