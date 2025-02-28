@@ -4,7 +4,7 @@ export default class Starfield {
     constructor(numStars = 500)
     {
         const textureLoader = new THREE.TextureLoader();
-        const starTexture = textureLoader.load("../textures/star_texture.png");
+        const starTexture = textureLoader.load("../images/star_texture.png");
 
         this.vertices = [];
         this.colors = [];

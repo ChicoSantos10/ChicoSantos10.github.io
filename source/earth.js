@@ -2,7 +2,7 @@ import * as THREE from 'three'
 
 export function createEarth(radius = 1) {
     const textureLoader = new THREE.TextureLoader()
-    const earthTexture = textureLoader.load("../textures/earth_texture.jpg")
+    const earthTexture = textureLoader.load("../images/earth_texture.jpg")
 
     const detail = 60
     const earthGeo = new THREE.IcosahedronGeometry(radius, detail)
