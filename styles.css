@@ -1,90 +1,178 @@
-* {
-    --bg: darkslategrey;
-    --header: navajowhite;
-}
-
 body {
-    background: var(--bg, darkslategrey);
+    background: var(--night);
     margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: title-font, fantasy;
 }
 
 h1 {
+    --blur-radius: 30px;
+    --outline-radius: 2px;
+
+    font-size: 15vh;
     text-align: center;
-    color: var(--bg, darkslategrey);
+    position: absolute;
+    top: 0;
+    width: 100%;
+    margin: 5vh 0;
+    max-height: 25%;
+    color: var(--title);
+    /*-webkit-text-stroke: 1px white;*/
+    text-shadow:
+            white var(--outline-radius) 0 2px, white 0 var(--outline-radius) 2px, white calc(-1*var(--outline-radius)) 0 2px, white 0 calc(-1*var(--outline-radius)) 2px,
+            var(--title) -2px -2px var(--blur-radius), var(--title) 2px 2px var(--blur-radius), var(--title) 0 0 var(--blur-radius);
+}
+
+.about-me {
+    display: block;
+    position: absolute;
+    background: hsla(174 100% 82.7% / 0.91);
+    width: 50%;
+    height: 30%;
+    min-height: fit-content;
+    left: 0;
+    right: 0;
+    top: 30%;
+    margin-inline: auto;
+    border-radius: 15px;
+    border: 2px ridge white;
+    padding: 15px;
+    transform: scale(0, 1);
+    transition: transform 200ms;
+}
+
+.about-me.active {
+    transform: scale(1, 1);
+}
+
+.cover {
+    background-color: rgb(0 0 0 / 35%);
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    transition: background-color 200ms;
+}
+
+.cover.hidden {
+    background-color: rgb(0 0 0 / 0%);
+}
+
+#menu-buttons {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 40%;
+    height: 25%;
+    justify-content: space-between;
+    left: 10%;
+}
+
+button {
+    display: block;
+    position: relative;
+    padding: 0.2em 0;
+}
+
+#menu-buttons button {
+    border: none;
+    background: none;
+    color: white;
+    width: fit-content;
+    font-size: xxx-large;
+    font-family: title-font, fantasy;
+    text-shadow: 0 0 3px #080e07, 0 0 6px #304a43, 0 0 9px #537f78, 0 0 12px #7dbfb7, 0 0 20px #a7fff6;
+    transition: padding-left 200ms;
+}
+
+#menu-buttons button:hover {
+    padding-left: 20px;
+}
+
+#menu-buttons button::after {
+    content: '';
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.1em;
+    display: block;
+    background: #8D909B;
+    transform: translate3d(-20%, 0, 0);
+    opacity: 0;
+    transition: opacity 200ms ease-in, transform 200ms;
+}
+
+#menu-buttons button:hover::after {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+}
+
+#portrait {
+    float: left;
+    margin: 0 30px 30px 30px;
+    border: 2px ridge white;
+}
+
+.close-cross {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 10%;
+}
+
+p {
+    font-family: sans-serif;
+    font-size: 16px;
+    line-height: 28px;
+}
+
+h2 {
+    text-align: center;
     font-size: xxx-large;
     margin: 2px;
 }
 
-.header {
-    background: var(--header, navajowhite);
-    padding: 10px;;
+h2, p {
+    color: var(--night);
 }
 
-.socials {
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+.hidden {
+    visibility: hidden;
+    transition: visibility 100ms;
+}
+
+.disable {
+    display: none !important;
 }
 
 .links {
-    text-align: left;
-    display: flex;
-    flex-direction: row;
-    justify-content: left;
-    align-items: end;
 }
 
-.logo {
-    width: 32px;
-    height: auto;
+.links img {
+    inline-size: 100%;
+    width: var(--_height, 32px);
 }
 
-.project-link {
-    margin-left: 20px;
+.socials {
+    --_height: 60px;
+    --_gap: 2rem;
+    position: absolute;
+    bottom: 1vh;
+    width: 100%;
+    height: var(--_height) + var(--_gap);
+    grid-auto-columns: var(--_height);
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--_gap);
 }
 
-.projects {
-    color: var(--header, navajowhite);
-    border-width: 2px;
-    border-style: inset;
-    border-color: var(--header, navajowhite);
+.socials img {
+    inline-size: var(--_height, 32px);
 }
 
-.project-title {
-    margin-left: 10px;
-    margin-bottom: 0;
-}
-
-.project-text {
-    margin-top: 0;
-    margin-left: 10px;
-    color: white;
-    text-indent: 30px;
-}
-
-.project-contributions {
-    font-size: large;
-}
-
-.project-role {
-    margin-left: 40px;
-    margin-bottom: 0;
-}
-
-li {
-    font-size: small;
-}
-
-li:last-child::after {
-    content: "Source code in the github link below";
-}
-
-li:last-child::marker {
-    content: "🔽";
-}
-
-.project-contributions > li {
-    margin-left: 20px;
-}

@@ -1,0 +1,75 @@
+.grid-element.project {
+    grid-auto-flow: row;
+    grid-template-columns: 1fr;
+    overflow: scroll;
+}
+
+.project-details {
+
+}
+
+.project-cover {
+    float: left;
+}
+
+.project-cover > img {
+    aspect-ratio: 16 / 9;
+    inline-size: 350px;
+}
+
+.tag {
+    --border-radius: 15px;
+    border-radius: var(--border-radius);
+    background: var(--tag-color);
+    text-align: center;
+    width: 20%;
+}
+
+.tag.unity {
+    --tag-color: var(--night);
+    content: "Unity 2.0";
+    color: white;
+}
+
+.tag.c-sharp {
+    --tag-color: white;
+    color: black;
+}
+
+.project-details figcaption {
+    text-align: center;
+}
+
+.grid-group figure {
+    border: 1px solid var(--night);
+    background-color: var(--purple);
+    margin: var(--spacer);
+}
+
+.grid-group .tags {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    height: 100%;
+}
+
+.grid-group .project {
+    grid-auto-flow: row;
+    display: grid;
+    grid-auto-rows: 5fr 0.5fr 0.5fr;
+}
+
+.project-details .links,
+.project-details .tags {
+    --_height: 32px;
+    --spacer: 0.5rem;
+    height: var(--_height);
+    display: flex;
+    align-items: center;
+    gap: var(--spacer);
+}
+
+.contribution-details {
+    display: block;
+}
