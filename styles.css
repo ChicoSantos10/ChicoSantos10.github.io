@@ -177,3 +177,6 @@ h2, p {
     inline-size: var(--_height, 32px);
 }
 
+img {
+    max-inline-size: 100%;
+}

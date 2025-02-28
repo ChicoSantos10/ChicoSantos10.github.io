@@ -1,6 +1,7 @@
 .grid-element.project {
     grid-auto-flow: row;
     grid-template-columns: 1fr;
+    grid-template-rows: auto;
     overflow: scroll;
 }
 
