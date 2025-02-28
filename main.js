@@ -10,6 +10,7 @@ if ( !WebGL.isWebGL2Available() ) {
 }
 
 const renderer = new THREE.WebGLRenderer();
+console.log(window)
 renderer.setSize( window.innerWidth, window.innerHeight );
 document.body.prepend( renderer.domElement );
 
@@ -119,3 +120,5 @@ const container = document.querySelector('.image-comparison-container');
 document.querySelector('.slider').addEventListener('input', (e) => {
     container.style.setProperty('--position', `${e.target.value}%`);
 })
+
+ResizeScenes()
