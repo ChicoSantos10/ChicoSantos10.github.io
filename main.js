@@ -85,13 +85,37 @@ grids.forEach((grid) => {
 })
 
 const timelineButton = document.querySelector("#timeline-button")
-document.querySelectorAll('.fullscreen-cover').forEach( function ( e ) {
-    if(e.id === 'timeline-menu') {
+const projectsButton = document.querySelector("#projects-button")
+document.querySelectorAll('.fullscreen-cover').forEach( function ( cover ) {
+    if(cover.id === 'timeline-menu') {
         timelineButton.onclick = function () {
-            e.classList.remove('hidden')
+            cover.classList.remove('hidden')
         }
-        e.querySelector('.return').onclick = function () {
-            e.classList.add('hidden')
+    } else if(cover.id === 'projects-menu') {
+        projectsButton.onclick = function () {
+            cover.classList.remove('hidden')
         }
+
+        // const projects= cover.querySelector('.projects')
+        // cover.querySelectorAll(".project").forEach( function ( project ) {
+        //     const projectContent = cover.querySelector(`#${project.id}-content`)
+        //     if (!projectContent) {
+        //         return
+        //     }
+        //
+        //     project.onclick = function () {
+        //         projectContent.classList.remove('disable')
+        //         projects.classList.add('disable')
+        //     }
+        // })
     }
+
+    cover.querySelector('.return').onclick = function () {
+        cover.classList.add('hidden')
+    }
+})
+
+const container = document.querySelector('.image-comparison-container');
+document.querySelector('.slider').addEventListener('input', (e) => {
+    container.style.setProperty('--position', `${e.target.value}%`);
 })

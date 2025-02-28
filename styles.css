@@ -145,94 +145,34 @@ h2, p {
     transition: visibility 100ms;
 }
 
-@font-face {
-    font-family: title-font;
-    src: url("./fonts/BonaNovaSC-Regular.ttf");
-}
-
-/*TODO: Old Stuff below*/
-
-.title {
-    text-align: center;
-    background: aliceblue;
-    color: white;
-}
-
-* {
-    --bg: darkslategrey;
-    --header: navajowhite;
-}
-
-.header {
-    background: var(--header, navajowhite);
-    padding: 10px;;
-}
-
-.socials {
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+.disable {
+    display: none !important;
 }
 
 .links {
-    text-align: left;
-    display: flex;
-    flex-direction: row;
-    justify-content: left;
-    align-items: end;
 }
 
-.logo {
-    width: 32px;
-    height: auto;
+.links img {
+    inline-size: 100%;
+    width: var(--_height, 32px);
 }
 
-.project-link {
-    margin-left: 20px;
+.socials {
+    --_height: 60px;
+    --_gap: 2rem;
+    position: absolute;
+    bottom: 1vh;
+    width: 100%;
+    height: var(--_height) + var(--_gap);
+    grid-auto-columns: var(--_height);
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--_gap);
 }
 
-.projects {
-    color: var(--header, navajowhite);
-    border-width: 2px;
-    border-style: inset;
-    border-color: var(--header, navajowhite);
+.socials img {
+    inline-size: var(--_height, 32px);
 }
 
-.project-title {
-    margin-left: 10px;
-    margin-bottom: 0;
-}
-
-.project-text {
-    margin-top: 0;
-    margin-left: 10px;
-    color: white;
-    text-indent: 30px;
-}
-
-.project-contributions {
-    font-size: large;
-}
-
-.project-role {
-    margin-left: 40px;
-    margin-bottom: 0;
-}
-
-/*li {*/
-/*    font-size: small;*/
-/*}*/
-
-/*li:last-child::after {*/
-/*    content: "Source code in the github link below";*/
-/*}*/
-
-/*li:last-child::marker {*/
-/*    content: "🔽";*/
-/*}*/
-
-.project-contributions > li {
-    margin-left: 20px;
-}

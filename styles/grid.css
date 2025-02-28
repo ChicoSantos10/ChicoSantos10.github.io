@@ -56,6 +56,33 @@
     gap: var(--spacer);
 }
 
+.grid-group {
+    --spacer: 1rem;
+    --border-radius: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    border: 1px solid black;
+    border-radius: var(--border-radius);
+    background-color: var(--grey);
+    margin: var(--spacer);
+    padding: var(--spacer);
+    height: 80%;
+    overflow-y: auto;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.grid-group img {
+    inline-size: 100%;
+    aspect-ratio: 16/9;
+    margin-top: auto;
+    margin-bottom: auto;
+    max-height: 100%;
+    object-fit: cover;
+}
+
 .grid-element > .details {
     padding: var(--spacer, 2rem);
     background-color: var(--yellow);
@@ -68,6 +95,7 @@
     /*aspect-ratio: 16/9;*/
     margin-top: auto;
     margin-bottom: auto;
+    max-height: 100%;
 }
 
 .details {
