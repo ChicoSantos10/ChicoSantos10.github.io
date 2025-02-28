@@ -1,7 +1,8 @@
 import * as THREE from 'three'
+import { loadingManager } from './loadingManager.js'
 
 export function createEarth(radius = 1) {
-    const textureLoader = new THREE.TextureLoader()
+    const textureLoader = new THREE.TextureLoader(loadingManager)
     const earthTexture = textureLoader.load("../images/earth_texture.jpg")
 
     const detail = 60

@@ -1,9 +1,10 @@
 import * as THREE from "three";
+import { loadingManager } from './loadingManager.js'
 
 export default class Starfield {
     constructor(numStars = 500)
     {
-        const textureLoader = new THREE.TextureLoader();
+        const textureLoader = new THREE.TextureLoader(loadingManager);
         const starTexture = textureLoader.load("../images/star_texture.png");
 
         this.vertices = [];
