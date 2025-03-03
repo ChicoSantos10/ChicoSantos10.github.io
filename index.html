@@ -8,15 +8,19 @@
     <link rel="stylesheet" href="styles/grid.css">
     <link rel="stylesheet" href="styles/projects.css">
     <link rel="stylesheet" href="styles/imageComparison.css">
+    <link rel="stylesheet" href="styles/tabs.css">
+    <link rel="stylesheet" href="styles/skills.css">
     <link rel="icon" type="image/x-icon" href="images/favicon.png">
 </head>
 <body>
+<script type="module" src="source/tabs.js"></script>
 <script type="module" src="/main.js"></script>
 <h1 id="title">Francisco Santos</h1>
 <div id="menu-buttons" class="button-container">
     <button id="about-me-button">About Me</button>
     <button id="timeline-button">Timeline</button>
     <button id="projects-button">Projects</button>
+    <button id="skills-button">Skills</button>
 </div>
 <div class="socials">
     <a href="https://linkedin.com/in/francisco-santos-6a2847138" target="_blank">
@@ -384,6 +388,199 @@
             </div>
         </div>
         <button class="scroll-button right"></button>
+    </div>
+</div>
+<div id="skills-menu" class="fullscreen-cover hidden">
+    <h2 class="timeline">Skills</h2>
+    <button class="return"></button>
+    <div class="tabs-container">
+        <ul aria-labelledby="tabs-title">
+            <li><a href="#technical-skills">Technical</a></li>
+            <li><a href="#soft-skills">Soft</a></li>
+        </ul>
+        <div class="tab-panels flow">
+            <div id="technical-skills" class="tab-panel" aria-labelledby="tab-1">
+                <div class="skill-container">
+                    <h3>Programming Languages</h3>
+                    <div class="skill">
+                        <img src="images/csharp.svg" alt="c sharp logo" class="skill-title">
+                        <div class="skill-amount">
+                            <img src="images/controller.svg" alt="" class="skill-bar">
+                            <img src="images/controller.svg" alt="" class="skill-bar">
+                            <img src="images/controller.svg" alt="" class="skill-bar">
+                            <img src="images/controller.svg" alt="" class="skill-bar">
+                            <img src="images/controller.svg" alt="" class="skill-bar skill-transparent">
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <img src="images/cplusplus.svg" alt="c sharp logo" class="skill-title">
+                        <div class="skill-amount">
+                            <img src="images/controller.svg" alt="" class="skill-bar">
+                            <img src="images/controller.svg" alt="" class="skill-bar">
+                            <img src="images/controller.svg" alt="" class="skill-bar">
+                            <img src="images/controller.svg" alt="" class="skill-bar">
+                            <img src="images/controller.svg" alt="" class="skill-bar skill-transparent">
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <img src="images/c.svg" alt="" class="skill-title">
+                        <div class="skill-amount">
+                            <img src="images/controller.svg" alt="" class="skill-bar">
+                            <img src="images/controller.svg" alt="" class="skill-bar">
+                            <img src="images/controller.svg" alt="" class="skill-bar">
+                            <img src="images/controller.svg" alt="" class="skill-bar">
+                            <img src="images/controller.svg" alt="" class="skill-bar skill-transparent">
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <img src="images/javascript.svg" alt="" class="skill-title">
+                        <div class="skill-amount">
+                            <img src="images/controller.svg" alt="" class="skill-bar">
+                            <img src="images/controller.svg" alt="" class="skill-bar">
+                            <img src="images/controller.svg" alt="" class="skill-bar">
+                            <img src="images/controller.svg" alt="" class="skill-bar skill-transparent">
+                            <img src="images/controller.svg" alt="" class="skill-bar skill-transparent">
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <img src="images/typescript.svg" alt="" class="skill-title">
+                        <div class="skill-amount">
+                            <img src="images/controller.svg" alt="" class="skill-bar">
+                            <img src="images/controller.svg" alt="" class="skill-bar">
+                            <img src="images/controller.svg" alt="" class="skill-bar">
+                            <img src="images/controller.svg" alt="" class="skill-bar skill-transparent">
+                            <img src="images/controller.svg" alt="" class="skill-bar skill-transparent">
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <img src="images/kotlin.svg" alt="" class="skill-title">
+                        <div class="skill-amount">
+                            <img src="images/controller.svg" alt="" class="skill-bar">
+                            <img src="images/controller.svg" alt="" class="skill-bar">
+                            <img src="images/controller.svg" alt="" class="skill-bar skill-transparent">
+                            <img src="images/controller.svg" alt="" class="skill-bar skill-transparent">
+                            <img src="images/controller.svg" alt="" class="skill-bar skill-transparent">
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <img src="images/swift.svg" alt="" class="skill-title">
+                        <div class="skill-amount">
+                            <img src="images/controller.svg" alt="" class="skill-bar">
+                            <img src="images/controller.svg" alt="" class="skill-bar">
+                            <img src="images/controller.svg" alt="" class="skill-bar skill-transparent">
+                            <img src="images/controller.svg" alt="" class="skill-bar skill-transparent">
+                            <img src="images/controller.svg" alt="" class="skill-bar skill-transparent">
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-container">
+                    <h3>Frameworks</h3>
+                    <div class="skill">
+                        <img src="images/unity.svg" alt="c sharp logo" class="skill-title">
+                        <div class="skill-amount">
+                            <img src="images/controller.svg" alt="" class="skill-bar">
+                            <img src="images/controller.svg" alt="" class="skill-bar">
+                            <img src="images/controller.svg" alt="" class="skill-bar">
+                            <img src="images/controller.svg" alt="" class="skill-bar">
+                            <img src="images/controller.svg" alt="" class="skill-bar skill-transparent">
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <img src="images/monogame.png" alt="" class="skill-title">
+                        <div class="skill-amount">
+                            <img src="images/controller.svg" alt="" class="skill-bar">
+                            <img src="images/controller.svg" alt="" class="skill-bar">
+                            <img src="images/controller.svg" alt="" class="skill-bar">
+                            <img src="images/controller.svg" alt="" class="skill-bar skill-transparent">
+                            <img src="images/controller.svg" alt="" class="skill-bar skill-transparent">
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <img src="images/unreal.svg" alt="c sharp logo" class="skill-title">
+                        <div class="skill-amount">
+                            <img src="images/controller.svg" alt="" class="skill-bar">
+                            <img src="images/controller.svg" alt="" class="skill-bar">
+                            <img src="images/controller.svg" alt="" class="skill-bar skill-transparent">
+                            <img src="images/controller.svg" alt="" class="skill-bar skill-transparent">
+                            <img src="images/controller.svg" alt="" class="skill-bar skill-transparent">
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-container">
+                    <h3>Tools</h3>
+                    <div class="skill">
+                        <img src="images/rider.svg" alt="c sharp logo" class="skill-title">
+                        <div class="skill-amount">
+                            <img src="images/controller.svg" alt="" class="skill-bar">
+                            <img src="images/controller.svg" alt="" class="skill-bar">
+                            <img src="images/controller.svg" alt="" class="skill-bar">
+                            <img src="images/controller.svg" alt="" class="skill-bar">
+                            <img src="images/controller.svg" alt="" class="skill-bar skill-transparent">
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <img src="images/visualstudio.svg" alt="c sharp logo" class="skill-title">
+                        <div class="skill-amount">
+                            <img src="images/controller.svg" alt="" class="skill-bar">
+                            <img src="images/controller.svg" alt="" class="skill-bar">
+                            <img src="images/controller.svg" alt="" class="skill-bar">
+                            <img src="images/controller.svg" alt="" class="skill-bar">
+                            <img src="images/controller.svg" alt="" class="skill-bar skill-transparent">
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <img src="images/vscode.svg" alt="c sharp logo" class="skill-title">
+                        <div class="skill-amount">
+                            <img src="images/controller.svg" alt="" class="skill-bar">
+                            <img src="images/controller.svg" alt="" class="skill-bar">
+                            <img src="images/controller.svg" alt="" class="skill-bar">
+                            <img src="images/controller.svg" alt="" class="skill-bar">
+                            <img src="images/controller.svg" alt="" class="skill-bar skill-transparent">
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <img src="images/CLion.svg" alt="" class="skill-title">
+                        <div class="skill-amount">
+                            <img src="images/controller.svg" alt="" class="skill-bar">
+                            <img src="images/controller.svg" alt="" class="skill-bar">
+                            <img src="images/controller.svg" alt="" class="skill-bar">
+                            <img src="images/controller.svg" alt="" class="skill-bar skill-transparent">
+                            <img src="images/controller.svg" alt="" class="skill-bar skill-transparent">
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <img src="images/webstorm.svg" alt="c sharp logo" class="skill-title">
+                        <div class="skill-amount">
+                            <img src="images/controller.svg" alt="" class="skill-bar">
+                            <img src="images/controller.svg" alt="" class="skill-bar">
+                            <img src="images/controller.svg" alt="" class="skill-bar">
+                            <img src="images/controller.svg" alt="" class="skill-bar skill-transparent">
+                            <img src="images/controller.svg" alt="" class="skill-bar skill-transparent">
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <img src="images/neovim.svg" alt="c sharp logo" class="skill-title">
+                        <div class="skill-amount">
+                            <img src="images/controller.svg" alt="" class="skill-bar">
+                            <img src="images/controller.svg" alt="" class="skill-bar">
+                            <img src="images/controller.svg" alt="" class="skill-bar skill-transparent">
+                            <img src="images/controller.svg" alt="" class="skill-bar skill-transparent">
+                            <img src="images/controller.svg" alt="" class="skill-bar skill-transparent">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="soft-skills" aria-labelledby="tab-2">
+                <ul class="skills-list">
+                    <li>Critical Thinking</li>
+                    <li>Independence</li>
+                    <li>Problem Solver</li>
+                    <li>Team Player</li>
+                    <li>Time Management</li>
+                    <li>Creativity</li>
+                </ul>
+            </div>
+        </div>
     </div>
 </div>
 </body>

@@ -1,0 +1,42 @@
+.skill-container h3 {
+    font-size: 1.5rem;
+}
+
+.skill {
+    display: flex;
+    gap: 1em;
+    height: 5rem;
+}
+
+.skill-title {
+    inline-size: 20%;
+}
+
+.skill-bar {
+    width: 36px;
+    height: 100%;
+}
+
+.skill-amount {
+    display: flex;
+    gap: 16px;
+}
+
+.skill-transparent {
+    opacity: 0.25;
+}
+
+#technical-skills {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 64px;
+}
+
+.skills-list li {
+    font-size: 2em;
+    padding-left: 16px;
+}
+
+.skills-list li::marker {
+    content: url("../images/controller.svg");
+}

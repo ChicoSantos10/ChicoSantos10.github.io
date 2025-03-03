@@ -10,7 +10,6 @@ if ( !WebGL.isWebGL2Available() ) {
 }
 
 const renderer = new THREE.WebGLRenderer();
-console.log(window)
 renderer.setSize( window.innerWidth, window.innerHeight );
 document.body.prepend( renderer.domElement );
 
@@ -87,6 +86,7 @@ grids.forEach((grid) => {
 
 const timelineButton = document.querySelector("#timeline-button")
 const projectsButton = document.querySelector("#projects-button")
+const skillsButton = document.querySelector("#skills-button")
 document.querySelectorAll('.fullscreen-cover').forEach( function ( cover ) {
     if(cover.id === 'timeline-menu') {
         timelineButton.onclick = function () {
@@ -96,19 +96,10 @@ document.querySelectorAll('.fullscreen-cover').forEach( function ( cover ) {
         projectsButton.onclick = function () {
             cover.classList.remove('hidden')
         }
-
-        // const projects= cover.querySelector('.projects')
-        // cover.querySelectorAll(".project").forEach( function ( project ) {
-        //     const projectContent = cover.querySelector(`#${project.id}-content`)
-        //     if (!projectContent) {
-        //         return
-        //     }
-        //
-        //     project.onclick = function () {
-        //         projectContent.classList.remove('disable')
-        //         projects.classList.add('disable')
-        //     }
-        // })
+    } else if(cover.id === 'skills-menu') {
+        skillsButton.onclick = function () {
+            cover.classList.remove('hidden')
+        }
     }
 
     cover.querySelector('.return').onclick = function () {

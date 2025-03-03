@@ -161,7 +161,7 @@ h2, p {
 .socials {
     --_height: 60px;
     --_gap: 2rem;
-    --_border-radius: 100%;
+    --_border-size: 100%;
     position: absolute;
     bottom: 1vh;
     width: 100%;
