@@ -45,6 +45,16 @@ h1 {
     transition: transform 200ms;
 }
 
+@media (orientation: portrait) {
+    .about-me {
+        width: 80%;
+    }
+
+    .about-me p {
+        font-size: 20px;
+    }
+}
+
 .about-me.active {
     transform: scale(1, 1);
 }
